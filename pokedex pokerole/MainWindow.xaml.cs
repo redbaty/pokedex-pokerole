@@ -16,15 +16,19 @@ namespace pokedex_pokerole
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        private List<move_complete> moves;
+
         public MainWindow()
         {
             InitializeComponent();           
             List<pokemon> pkmns = LoadPokeData(@"C:\Users\e-eu\source\repos\pokedex pokerole\pokedex pokerole\data\pokemon.json");
             pkmnList.ItemsSource = pkmns;
+            moves = LoadMoves(@"C:\Users\e-eu\source\repos\pokedex pokerole\pokedex pokerole\data\moves.json");
 
-            
 
         }
 
@@ -46,6 +50,16 @@ namespace pokedex_pokerole
             }
         }
 
+        private List<move_complete> LoadMoves(string path)//
+        {
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                List<move_complete> moves = JsonConvert.DeserializeObject<List<move_complete>>(json);
+                return moves;
+            }
+        }
+
         private void LoadSingularPkmn(pokemon pkmn) //pkmns[number-1]
         {
             name.Text = pkmn.name;
@@ -61,6 +75,7 @@ namespace pokedex_pokerole
             vit.Content = computeStats(pkmn.vitality[0], pkmn.vitality[1]);
             spe.Content = computeStats(pkmn.special[0], pkmn.special[1]);
             ins.Content = computeStats(pkmn.insight[0], pkmn.insight[1]);
+            disob.Content = computeStats(pkmn.disobedience, "5");
             Sprite(Int32.Parse(pkmn.number));
             about.Text = pkmn.pokedex;
             movesList.ItemsSource = pkmn.moves;
@@ -125,6 +140,19 @@ namespace pokedex_pokerole
         {
             magicalThing();
         }
-    
+
+        private void movesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            foreach (Move mov in e.AddedItems)
+            { LoadSingularMov(mov); }
+        }
+
+        private void LoadSingularMov(Move mov)
+        {
+            move_complete thunderbolt =  moves.Find(m => m.name.Equals(mov.name));
+            moveName.Text = thunderbolt.name;
+            moveDesc.Text = thunderbolt.description;
+            moveAcc.Text = thunderbolt.accuracy;
+        }
     }
 }

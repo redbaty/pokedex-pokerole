@@ -1,6 +1,4 @@
-{ 
-  "moves" : [
-    {
+[    {
       "name": "Attack Order",
       "type": "Bug",
       "targets": "Foe",
@@ -6896,6 +6894,4 @@
       "damage_pool": "-",
       "effect": "The User applies CPR and/or first aid to an unconscious Ally. It won't receive Lethal Damage each hour anymore.",
       "description": "An attempt to apply basic first aid to a wounded ally."
-    }
-  ]
-}
+    }]
