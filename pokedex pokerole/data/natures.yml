@@ -1,0 +1,140 @@
+- name: Adamant
+  qualities: Powerful, Fierce, Relentless
+  description: |
+    An indomitable will that won't falter. Those with Adamant nature are belligerent and impassive.
+    Only the strong survive in this world, that's why power and strength is what they respect the most. You are either their equal or their inferior, working as a team does not fit them well. They believe everyone must carry their own weight and those who can't will be left behind.
+  
+- name: Bashful
+  qualities: Compassionate, Vulnerable, Family Oriented
+  description: |
+    There is an adorable shyness in them. They enjoy the simple things in life and are quite sensitive to other's emotions. They are very conscious about their own weaknesses and will try to make them better, but it hurts them to be pushed around and they may feel intimidated or disheartened if the challenges are too big. They need a strong figure who believes in them to feel confident.
+  
+- name: Bold
+  qualities: Adventurous, Confident, Daring
+  description: |
+    Real thrill seekers. The Bold view life with optimism and excitement, they firmly believe one must go forward no matter the consequences. They are easily provoked and quick to take action, often heading into challenges a lot bigger than themselves. Failure is something that hits them hard; but they ar known for getting back on their feet again and charge for adventure one more time. There's no mountain big enough to stop them.
+  
+- name: Brave
+  qualities: Fearless, Level-headed, Protector
+  description: |
+    The Brave of heart will face any situation with courage and a cool head. They won't tolerate bullying or abuse anywhere near them and will always encourage others to conquer their fears. "Selfless" is their second name, as they will never turn their back on their comrades even at the cost of their own safety. Others look up to them as they inspire confidence and trust.
+  
+- name: Hardy 
+  qualities: Dependable, Resilient, Resourceful
+  description: |
+    Life has been tough, but they know how to face any difficulty that may arise. The word "disheartened" is foreign to them. You'll rarely find them unprepared. Life is full of obstacles, yet they do their best to endure and overcome. Taking things lightly is difficult for them, but they are dependable. They'll help you get through the hardest of scenarios.
+  
+- name: Calm
+  qualities: Reasonable, Peaceful, Balanced
+  description: |
+    Peace and tranquility is the most important thing for those with a Calm nature. They are not noisy nor do they want much thrill in their lives. Conflict is not welcome and they tend to be peacemakers.
+    It is rare to see them fall for provications as they keep their distance from creatures with a bad attitude.
+    Their presence is pleasnt and soothing, making them easy to approach.
+  
+- name: Hasty
+  qualities: Eager, Enthusiastic, Hustle
+  description: |
+    The past is gone, the future is yet to come, you have to live the moment and the moment is now!
+    They don't have time to mope about past losses or worry about future battles. They are eager to see what comes next, ending a project quickly so they can get into another one. They make their lives on the go and rarely sit around to relax or meditate things through. There will always be something to do with them around.
+  
+- name: Careful
+  qualities: Analytic, Skeptical, Withdrawn
+  description: |
+    Those under this nature will often ponder their options according to the level of risk. If the benefit is substantial but the risk is too great they will prefer an option less rewarding but also less risky. They may take some time to warm up to strangers and will always be alert to their surroundings. Keeping a situation under control is important for them. It is no shame to run away to fight another day.
+  
+- name: Impish
+  qualities: Mischievous, Witty, Playful
+  description: |
+    Free spirits hungry for enjoyment and fun at the expense of others. They carry themselves with a light heart but you can also see a smug smirk on their faces.
+    Irreverent and agile of mind, they dislike routine and chores. They are the kind to find solutions around a problem instead of a head on confrontation.
+    You'll recognize them as the pranksters of the group.
+
+- name: Docile
+  qualities: Kind, Team worder, Service spirit
+  description: |
+    Always with a courteous disposition, a Docile nature idicates that you put others before yourself. Those under this nature love to please and be of assistance to their companions and community.
+    They may not be big achievers, but even if only one person appreciates their efforts they will feel accomplished.
+    They make great teammates and will be the first to ask: "How may I be of service?"
+  
+- name: Jolly
+  qualities: Cheerful, Charming, Energetic
+  description: |
+    They love to spread happiness around and will always have a smile to give you. They rarely feel gloomy and dislike when others do.
+    They easily form close friendships as others enjoy their good mood and affable disposition. They understand the power to move a mountain is through an enthusiastic demeanor and cheerful smiles.
+  
+- name: Gentle
+  qualities: Graceful, Charismatic, Extroverts
+  description: |
+    A Gently personality reflects on graceful conversations and pleasnt social interactions. They enjoy doing things with care and refinement, and others come to them simply to revel in their sophisticated presence.
+    They enjoy luxuries, but can be quite demanding with their tastes. Give them the attention they seek and they'll shower you in glamour and style.
+  
+- name: Lax
+  qualities: Unconcerned, Indolent, Simple
+  description: |
+    Lax is an inconstant nature, those under it will do things whenever they feel like it.
+    Its not that they are lazy, they just don't see the need to waste energy on stuff that's not important for them yet. Since they don't care to fill anyone's expectations, they need a reason to keep motivated. One thing is certain, something must be really important for them to give everything they've got.
+  
+- name: Lonely
+  qualities: Independent, Introspective, Solitary
+  description: |
+    They like to keep their distance and do everything on their own. They often feel it's up to them and nobody else to get things done and will often burden themselves with responsibilty that should be shared. They are hard to get close to, since they prefer their solitude. However, they can be trusted to do their best even if they are unguided.
+  
+- name: Quiet
+  qualities: Silent, Reserved, Spectator
+  description: |
+    Life is what happens around those with a Quiet nature. They often take a passive stance over the circumstances around them. Strong thoughts or opinions they have will rarely be expressed, so they are not the greatest at social interactions. They may be afraid to make a mistake or consider it a hassle to take action. They need a good motive to take an active role on whatever is happening.
+  
+- name: Mild
+  qualities: Meek, Serene, Comforting
+  description: |
+    "Harmless" is the word that best describes a Mild nature. They are patient and calm with others, reliable and caring on every matter. Because of this, others seek their company as stable ground. They seek to understand people and Pokémon and have a natural talent to do it. They tend to keep their needs to themselves and sometimes stay in the background, but they are the ones to turn when you need someone to listen.
+  
+- name: Quirky
+  qualities:  Unusal, Open-Minded, Original
+  description: |
+    You can't really understand how their mind works. Those who have a Quirky nature will usually see the world in a unique way that only they seem to comprehend.
+    The way they act will be peculiar and often attract puzzled looks. The way they solve problems will often be completely different than the way anyone else would have solve them. They accept new things easily and are eager for stimulation.
+
+- name: Modest
+  qualities: Measured, Self-Assured, Hard Worker
+  description: |
+    When you are aware of your potential you don't need others to praise you for it. A Modest nature knows the reward is the constant improvement of their abilities, not the acknowledging of others. They won't show off nor will they diminished when other display better capabilities. They'll do their best always and the only one who may judge the right or wrong of their ways is themselves.
+  
+- name: Rash
+  qualities: Reckless, Unrefined, Daredevil
+  description: |
+    They are reckless, and exposing themselves to danger their idea of fun. They are blunt and direct in the way they act with others, you are either their friend or you are their enemy. They are known for rushing into action with a "hit first, ask later" mentality. They are known to be quick-tempered, loud-mouthed and foolhardy.
+  
+- name: Naive
+  qualities: Curious, Lighthearted, Innocent
+  description: |
+    The world is full of wonder; there is always something new to discover and many others to befriend.
+    A Naive nature is a curious and innocent nature, they easily trust others because they ignore the many dangers of the world. They still have a lot to learn, and mishaps may make them lose a little of the spark in their eyes, but a good friend will make them shine even brighter.
+  
+- name: Relaxed
+  qualities: Carefree, Meditative, Nonchalant
+  description: |
+    The problems of the world are not their problems.
+    A Relaxed nature will allow its bearer to take it easy and never lose their cool. They will never stress over trivial matters and won't instigate trouble.
+    Should disputes arise, they will invite others to calm down through breathing and meditation. Some may call them carefree, they will call themselves enlightened.
+  
+- name: Naughty
+  qualities: Devious, Rebel, Sly
+  description: |
+    Why should they listen to you? You are not their boss! Most of the time they'll deliberately do the opposite from what's expected from them. Why? Because they can, of course. They love to see others get mat at their antics and will use their clever mind and cunning to get away with their misdeeds. They'll only behave when there's something to gain or because someone has put them in their place.
+  
+- name: Sassy
+  qualities: Lively, Irreverent, Mouthy
+  description: |
+    They have an attitude, and those who take themselves too seriously may dislike it, but the Sassy natured are simply not afraid to voice their honest opinion and will always find ways to say their thoughts in a creative way. There are no middle grounds with them, they either love or hate something, so they can be difficult or easy to deal with, they won't willingly bend to anyone but that is part of their charm.
+  
+- name: Serious
+  qualities: Steadfast, Rigid, Commited
+  description: |
+    They have a big sense of responsibility and don't really appreciate when others don't focus as much as them on a task. If they have a duty they will not stop until it's fulfilled, everything else is a useless distractions. They have trouble relaxing and they can be hard to deal with. But if you want things done and done well they are the ones to look for.
+  
+- name: Timid
+  qualities: Shy, Apprehensive, Sensible
+  description: |
+    They have built around themselves that make it hard for others to see what's inside.
+    They just want to be accepted but they will never really ask for anything. Their confidence is usually placed in a leader figure rather than on themselves. This makes them easger to please but terrified to fail. They need to learn to trust in their own capabilities to reach their full potential.

@@ -1,0 +1,59 @@
+﻿<Window x:Class="pokedex_pokerole.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pokedex_pokerole"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="613.525" Width="1066.115">
+    <Grid RenderTransformOrigin="0.501,0.503" Margin="0,0,-71,3" HorizontalAlignment="Left" Width="1051">
+        <ListBox x:Name="pkmnList" SelectionMode="Single"  HorizontalAlignment="Left" Height="464" Margin="10,95,0,0" VerticalAlignment="Top" Width="323" RenderTransformOrigin="0.502,0.496" SelectionChanged="pkmnList_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=number}"/>
+                        <TextBlock Text=" - "/>
+                        <TextBlock Text="{Binding Path=name}"/>
+                        <TextBlock Text=" - "/>
+                        <TextBlock Text="{Binding Path=category}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:Name="number" HorizontalAlignment="Left" Height="20" Margin="506,61,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="20" Margin="596,61,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="262"/>
+        <TextBox x:Name="hieght" HorizontalAlignment="Left" Height="20" Margin="506,95,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="weight" HorizontalAlignment="Left" Height="20" Margin="596,95,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="94"/>
+        <TextBox x:Name="category" HorizontalAlignment="Left" Height="20" Margin="695,95,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="163"/>
+        <TextBox x:Name="stage1" HorizontalAlignment="Left" Height="20" Margin="506,128,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="stage2" HorizontalAlignment="Left" Height="20" Margin="596,128,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="stage3" HorizontalAlignment="Left" Height="20" Margin="695,128,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="85"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="306,60,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" />
+        <Label Content="Strength" HorizontalAlignment="Left" Margin="506,164,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Dexterity" HorizontalAlignment="Left" Margin="506,196,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Vitality" HorizontalAlignment="Left" Margin="506,229,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Special" HorizontalAlignment="Left" Margin="780,164,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Insight" HorizontalAlignment="Left" Margin="780,197,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="Base HP" HorizontalAlignment="Left" Margin="780,229,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="str" Content="???" HorizontalAlignment="Left" Margin="596,164,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="dex" Content="???" HorizontalAlignment="Left" Margin="596,196,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="vit" Content="???" HorizontalAlignment="Left" Margin="596,229,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="spe" Content="???" HorizontalAlignment="Left" Margin="870,164,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="ins" Content="???" HorizontalAlignment="Left" Margin="870,197,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label x:Name="hp" Content="???" HorizontalAlignment="Left" Margin="870,229,0,0" VerticalAlignment="Top" Height="28"/>
+        <Image x:Name="img" HorizontalAlignment="Left" Height="124" Margin="894,24,0,0" VerticalAlignment="Top" Width="124" />
+        <TextBox x:Name="about" HorizontalAlignment="Left" Height="58" Margin="506,262,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="417"/>
+        <ListBox x:Name="movesList" HorizontalAlignment="Left" Height="132" Margin="513,427,0,0" VerticalAlignment="Top" Width="410">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=exp}"/>
+                        <TextBlock Text=" - "/>
+                        <TextBlock Text="{Binding Path=name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>

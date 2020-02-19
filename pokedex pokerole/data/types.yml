@@ -1,0 +1,198 @@
+- &Normal
+  name: Normal
+  weaknesses:
+    - *Fight
+  immunities:
+    - *Ghost
+- &Bug
+  name: Bug
+  resistances:
+    - *Fight
+    - *Grass
+    - *Ground
+  weaknesses:
+    - *Fire
+    - *Flying
+    - *Rock
+- &Dark 
+  name: Dark
+  resistances:
+   - *Dark
+   - *Ghost
+  weaknesses:
+   - *Bug
+   - *Fairy
+   - *Fight
+  immunities:
+   - *Psychic
+- &Dragon
+  name: Dragon
+  resistances:
+    - *Electric
+    - *Fire
+    - *Grass
+    - *Water
+  weaknesses:
+    - *Dragon
+    - *Fairy
+    - *Fight
+- &Electric
+  name: Electric
+  resistances:
+    - *Electric
+    - *Flying
+    - *Steel
+  weaknesses:
+    - *Ground
+- &Fairy
+  name: Fairy
+  resistances:
+    - *Bug
+    - *Dark
+    - *Fight
+  weaknesses:
+    - *Poison
+    - *Steel
+  immunities:
+    - *Dragon
+- &Fight
+  name: Fight
+  resistances:
+    - *Bug
+    - *Dark
+    - *Rock
+  weaknesses:
+    - *Fairy
+    - *Flying
+    - *Psychic
+- &Fire
+  name: Fire
+  resistances:
+    - *Bug
+    - *Fairy
+    - *Fire
+    - *Grass
+    - *Ice
+    - *Steel
+  weaknesses:
+    - *Ground
+    - *Rock
+    - *Water
+- &Flying
+  name: Flying
+  resistances:
+    - *Bug
+    - *Fight
+    - *Grass
+  weaknesses:
+    - *Electric
+    - *Ice
+    - *Rock
+  immunities:
+    - *Ground
+- &Ghost
+  name: Ghost
+  resistances:
+    - *Bug
+    - *Poison
+  weaknesses:
+    - *Dark
+    - *Ghost
+  immunities:
+    - *Fight
+    - *Normal
+- &Grass
+  name: Grass
+  resistances:
+    - *Electric
+    - *Grass
+    - *Ground
+    - *Water
+  weaknesses:
+    - *Bug
+    - *Fire
+    - *Flying
+    - *Ice
+    - *Poison
+- &Ground
+  name: Ground
+  resistances:
+    - *Poison
+    - *Rock
+  weaknesses:
+    - *Grass
+    - *Ice
+    - *Water
+  immunities:
+    - *Electric
+- &Ice
+  name: Ice
+  resistances:
+    - *Ice
+  weaknesses:
+    - *Fight
+    - *Fire
+    - *Rock
+    - *Steel
+- &Poison
+  name: Poison
+  resistances:
+    - *Bug
+    - *Fairy
+    - *Fight
+    - *Grass
+    - *Poison
+  weaknesses:
+    - *Ground
+    - *Psychic
+- &Psychic
+  name: Psychic
+  resistances:
+    - *Fight
+    - *Psychic
+  weaknesses:
+    - *Bug
+    - *Dark
+    - *Ghost
+- &Rock
+  name: Rock
+  resistances:
+    - *Fire
+    - *Flying
+    - *Normal
+    - *Poison
+  weaknesses:
+    - *Grass
+    - *Ground
+    - *Fight
+    - *Steel
+    - *Water
+- &Steel
+  name: Steel
+  resistances: 
+    - *Bug
+    - *Dragon
+    - *Flying
+    - *Fairy
+    - *Grass
+    - *Ice
+    - *Normal
+    - *Psychic
+    - *Rock
+    - *Steel
+  weaknesses:
+    - *Fight
+    - *Fire
+    - *Ground
+  immunities:
+    - *Poison
+- &Water
+  name: Water
+  resistances: 
+    - *Fire
+    - *Ice
+    - *Steel
+    - *Water
+  weaknesses:
+    - *Electric
+    - *Grass

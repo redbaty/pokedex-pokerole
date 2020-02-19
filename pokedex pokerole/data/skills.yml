@@ -1,0 +1,53 @@
+- name: Fight
+  who: All
+  specialties:
+     - name: Brawl
+       who: All
+     - name: Channel
+       who: Pokemon
+     - name: Throw
+       who: Trainer
+     - name: Evasion
+       who: All
+     - name: Clash
+       who: Pokemon
+     - name: Weapons
+       who: Trainer
+
+- name: Survival
+  who: All
+  specialties:
+     - name: Alert
+       who: All
+     - name: Athletic
+       who: All
+     - name: Nature
+       who: All
+     - name: Stealth
+       who: All
+
+- name: Contest
+  who: All
+  specialties:
+    - name: Allure
+      who: Pokemon
+    - name: Empathy
+      who: Trainer
+    - name: Etiquette
+      who: All
+    - name: Intimidate
+      who: All
+    - name: Perform
+      who: All
+
+- name: Knowledge
+  who: Trainer
+  specialties:
+    - name: Crafts
+      who: Trainer
+    - name: Lore
+      who: Trainer
+    - name: Medicine
+      who: Trainer
+    - name: Science
+      who: Trainer
