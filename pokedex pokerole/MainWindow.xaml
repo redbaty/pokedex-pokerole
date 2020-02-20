@@ -43,7 +43,7 @@
         <Label x:Name="hp" Content="???" HorizontalAlignment="Left" Margin="790,169,0,0" VerticalAlignment="Top" Height="28"/>
         <Image x:Name="img" HorizontalAlignment="Left" Height="124" Margin="917,10,0,0" VerticalAlignment="Top" Width="124" />
         <TextBox x:Name="about" HorizontalAlignment="Left" Height="58" Margin="426,225,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="417"/>
-        <ListBox x:Name="movesList" SelectionMode="Single" HorizontalAlignment="Left" Height="159" Margin="426,400,0,0" VerticalAlignment="Top" Width="237"
+        <ListBox x:Name="movesList" SelectionMode="Single" HorizontalAlignment="Left" Height="183" Margin="426,384,0,0" VerticalAlignment="Top" Width="237"
                  SelectionChanged="movesList_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -57,9 +57,13 @@
         </ListBox>
         <Label Content="Disobedience" HorizontalAlignment="Left" Margin="426,197,0,0" VerticalAlignment="Top" Height="28"/>
         <Label x:Name="disob" Content="???" HorizontalAlignment="Left" Margin="516,197,0,0" VerticalAlignment="Top" Height="28"/>
-        <TextBox x:Name="moveName" HorizontalAlignment="Left" Height="20" Margin="682,402,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="245"/>
-        <TextBox x:Name="moveDesc" HorizontalAlignment="Left" Height="55" Margin="682,452,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="245"/>
-        <TextBox x:Name="moveAcc" HorizontalAlignment="Left" Height="20" Margin="682,427,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="245"/>
+        <TextBox x:Name="moveName" HorizontalAlignment="Left" Height="20" Margin="682,384,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="moveDesc" HorizontalAlignment="Left" Height="55" Margin="682,510,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="moveAcc" HorizontalAlignment="Left" Height="20" Margin="682,434,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="moveType" HorizontalAlignment="Left" Height="20" Margin="682,409,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="moveTarget" HorizontalAlignment="Left" Height="20" Margin="837,409,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="moveDamage" HorizontalAlignment="Left" Height="20" Margin="682,459,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="305"/>
+        <TextBox x:Name="moveEffect1" HorizontalAlignment="Left" Height="20" Margin="682,484,0,0" TextWrapping="Wrap" Text="???" VerticalAlignment="Top" Width="305"/>
 
     </Grid>
 </Window>
