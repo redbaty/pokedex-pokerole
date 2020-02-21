@@ -18,6 +18,8 @@
 
             <pokerole:CategoryColorConverter x:Key="CategoryColorConverter" />
             <pokerole:PokemonTitleConverter x:Key="PokemonTitleConverter" />
+            <pokerole:VisibleIfNotNull x:Key="VisibleIfNotNull" />
+            <pokerole:VisibleIfNull x:Key="VisibleIfNull" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

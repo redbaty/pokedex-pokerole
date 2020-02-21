@@ -19,13 +19,23 @@
         d:DataContext="{d:DesignInstance pokerole:MainWindowViewModel}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="380" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <ListView
-                ItemsSource="{Binding Pokemons}"
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Padding="8">
+                <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="0 0 0 12"
+                         materialDesign:HintAssist.Hint="Search" materialDesign:TextFieldAssist.HasClearButton="True" />
+            </Border>
+
+            <ListView Grid.Row="1"
+                ItemsSource="{Binding FilteredPokemons}"
                 SelectedItem="{Binding SelectedPokemon}"
                 HorizontalContentAlignment="Stretch">
                 <ListView.ItemTemplate>
@@ -71,9 +81,17 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </ScrollViewer>
+        </Grid>
 
-        <Grid HorizontalAlignment="Stretch" Grid.Column="1" Margin="24">
+
+        <Grid Visibility="{Binding SelectedPokemon, Converter={StaticResource VisibleIfNull}}"
+              HorizontalAlignment="Stretch" Grid.Column="1" Margin="24">
+            <TextBlock Text="Selecione um pokemão garai" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Style="{StaticResource MaterialDesignHeadline4TextBlock}" />
+        </Grid>
+
+        <Grid Visibility="{Binding SelectedPokemon, Converter={StaticResource VisibleIfNotNull}}"
+              HorizontalAlignment="Stretch" Grid.Column="1" Margin="24">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -81,48 +99,50 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition MinWidth="80" Width="Auto"  />
-                </Grid.ColumnDefinitions>
-                <TextBox materialDesign:HintAssist.Hint="Pokemon"
-                         IsReadOnly="True"
-                         pokerole:TextBoxBehavior.SelectAllTextOnFocus="True"
-                         Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                         Text="{Binding SelectedPokemon, Converter={StaticResource PokemonTitleConverter}}" />
-                <Image Margin="8 0 0 0" Grid.Column="1" MaxHeight="60" Source="{Binding PokemonImage}"></Image>
-            </Grid>
-            <Grid Grid.Row="1" Margin="0 8 -8 8">
+            <Grid Grid.Row="0" Margin="0 8 -8 8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
+                    <ColumnDefinition Width="120" />
                 </Grid.ColumnDefinitions>
-                <TextBox pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" materialDesign:HintAssist.Hint="Height" Margin="0 0 8 0"
+                <Image Stretch="UniformToFill" Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Source="{Binding PokemonImage}" />
+                <pokerole:SelectableTextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Pokemon"
+                                              Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                                              Text="{Binding SelectedPokemon, Converter={StaticResource PokemonTitleConverter}}" />
+                <TextBox Grid.Row="1" Grid.Column="0" pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" materialDesign:HintAssist.Hint="Height"
+                         Margin="0 0 8 0"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
                          Text="{Binding SelectedPokemon.height}" />
-                <TextBox pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" materialDesign:HintAssist.Hint="Weight" Grid.Column="1" Margin="0 0 8 0"
+                <TextBox Grid.Row="1" pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" materialDesign:HintAssist.Hint="Weight"
+                         Grid.Column="1" Margin="0 0 8 0"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
                          Text="{Binding SelectedPokemon.weight}" />
-                <TextBox pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" materialDesign:HintAssist.Hint="Category" Grid.Column="2" Margin="0 0 8 0"
+                <TextBox Grid.Row="1" pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" materialDesign:HintAssist.Hint="Category"
+                         Grid.Column="2" Margin="0 0 8 0"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
                          Text="{Binding SelectedPokemon.category}" />
             </Grid>
             <Grid Grid.Row="2">
-                <ItemsControl Margin="0 0 -8 0" HorizontalContentAlignment="Stretch" ItemsSource="{Binding SelectedPokemon.evolutions}" Grid.IsSharedSizeScope="True">
+                <ItemsControl Margin="0 0 -8 0" HorizontalContentAlignment="Stretch"
+                              ItemsSource="{Binding SelectedPokemon.evolutions}" Grid.IsSharedSizeScope="True">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <UniformGrid Rows="1"/>
+                            <UniformGrid Rows="1" />
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate
                             DataType="{x:Type system:String}">
-                            <TextBox pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" Margin="0 0 8 0" HorizontalAlignment="Stretch" materialDesign:HintAssist.Hint="Category"
+                            <TextBox pokerole:TextBoxBehavior.SelectAllTextOnFocus="True" Margin="0 0 8 0"
+                                     HorizontalAlignment="Stretch" materialDesign:HintAssist.Hint="Category"
                                      Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                                      IsReadOnly="True"
                                      Text="{Binding Path=.}" />
