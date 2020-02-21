@@ -17,9 +17,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="613.525" Width="1066.115"
         d:DataContext="{d:DesignInstance pokerole:MainWindowViewModel}">
-    <Grid RenderTransformOrigin="0.501,0.503" Margin="0,0,-71,3" HorizontalAlignment="Left" Width="1051">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="400" Width="Auto" />
+            <ColumnDefinition Width="300" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
@@ -73,7 +73,7 @@
             </ListView>
         </ScrollViewer>
 
-        <Grid Grid.Column="1" Margin="24">
+        <Grid HorizontalAlignment="Stretch" Grid.Column="1" Margin="24">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
