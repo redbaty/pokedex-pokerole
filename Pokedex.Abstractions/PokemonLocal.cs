@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace pokedex_pokerole
+namespace Pokedex.Abstractions
 {
-    class pokemon
-    {        public string number { get; set; }
+    public class PokemonLocal
+    {
+        public int? number { get; set; }
         public string name { get; set; }
         public string height { get; set; }
         public string weight { get; set; }
@@ -28,10 +25,10 @@ namespace pokedex_pokerole
         public string disobedience { get; set; }
         public List<Move> moves { get; set; }
     }
+
     public class Move
     {
         public string name { get; set; }
         public string exp { get; set; }
     }
-    
 }
